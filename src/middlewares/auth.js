@@ -5,6 +5,8 @@ const auth = async (req, res, next) => {
 	const { authorization } = req.headers
 	const token = authorization?.replace('Bearer ', '')
 
+	console.log('auth', { token })
+
 	try {
 		const userSessionPromise = await connection.query(`
 			SELECT * FROM sessions WHERE token = $1;
