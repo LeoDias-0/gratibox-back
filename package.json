@@ -6,7 +6,7 @@
 	"main": "server.js",
 	"scripts": {
 		"test": "NODE_ENV=test npx jest --run-in-band",
-		"start": "clear && npx kill-port 4000 && npx nodemon ./src/server.js"
+		"start": "NODE_ENV=prod node ./src/server.js"
 	},
 	"keywords": [],
 	"author": "",
